@@ -372,7 +372,6 @@ main .site-title .site-background{
 }
 
 .work__img{
-  height: 250px;
   box-shadow: 0 4px 25px rgba(14,36,49,.15);
   border-radius: .5rem;
   overflow: hidden;
@@ -483,7 +482,7 @@ main .site-title .site-background{
     bottom: 15%;
   }
 
-  .about__container, .skills__container, .service__container{
+  .about__container, .skills__container{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     text-align: initial;
@@ -557,6 +556,11 @@ main .site-title .site-background{
   position: relative;
 }
 /* contact */
+.shadow-dark{
+  -webkit-box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
 
 
 
