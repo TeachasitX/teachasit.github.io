@@ -120,7 +120,7 @@ img{
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
+  background-color: var(--second-color);
   box-shadow: 0 1px 4px rgba(146,161,176,.15);
 }
 
@@ -161,10 +161,10 @@ img{
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background-color: var(--first-color);
+  background-color: #fff;
 }
 .nav__logo{
-  color: var(--second-color);
+  color: #fff;
 }
 .nav__toggle{
   color: var(--second-color);
@@ -197,15 +197,25 @@ main .site-title{
 }
 
 main .site-title .site-background{
-  padding-top: 10rem;
+  padding-top: 0rem;
   text-align: center;
   color: var(--white);
 }
 /*===== HOME =====*/
 .home{
-  height: calc(100vh - 3rem);
-  row-gap: 1rem;
+  background: url('../img/lego.gif');
+  background-size: cover;
+  overflow: hidden;
 }
+
+.home-container{
+  position: relative;
+  height: calc(100vh - var(--header-height));
+  /*grid-template-rows: repeat(2, max-content);*/
+  /*align-content: space-around;*/
+  row-gap: 2rem;
+}
+
 .home__data{
   align-self: center;
 }
@@ -227,7 +237,7 @@ main .site-title .site-background{
   color: var(--second-color);
 }
 .home__social-icon:hover{
-  color: var(--first-color);
+  color: #fff;
 }
 .home__img{
   position: absolute;
@@ -247,6 +257,7 @@ main .site-title .site-background{
   border-radius: .5rem;
 }
 .button:hover{
+  background-color: var(--second-color);
   box-shadow: 0 10px 36px rgba(0,0,0,.15);
 }
 
@@ -459,7 +470,7 @@ main .site-title .site-background{
     display: none;
   }
   .nav__link{
-    color: var(--second-color);
+    color: #fff;
   }
 
   .home{
@@ -469,7 +480,7 @@ main .site-title .site-background{
     align-self: flex-end;
   }
   .home__social{
-    padding-top: 0;
+    padding-top: 0rem;
     padding-bottom: 2.5rem;
     flex-direction: row;
   }
@@ -480,6 +491,17 @@ main .site-title .site-background{
   .home__img{
     width: 457px;
     bottom: 15%;
+  }
+
+  .home-img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  
+  }
+  .home-img img{
+    width: 240px;
+  
   }
 
   .about__container, .skills__container{
@@ -560,8 +582,13 @@ main .site-title .site-background{
   -webkit-box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
-
-
-
-
 }
+@media screen and (min-width: 1024px){
+  .bd-container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  
+}
+
